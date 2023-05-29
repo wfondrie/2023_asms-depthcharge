@@ -1,0 +1,25 @@
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # For the template:
+  - python>=3.10
+  - setuptools>=61.0.0
+  - setuptools_scm
+  - wheel
+  - pip
+  - python-dotenv>=0.5.1
+  - pip:
+      - -e . # Our local package
+
+  # Data Science Packages
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - vizta
+  - jupyterlab
+  - ipykernel

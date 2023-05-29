@@ -1,0 +1,67 @@
+
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools_scm[toml]>=3.4"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "src"
+authors = [{name = "William E Fondrie"}]
+description = "Notebooks and analyses to accompany my 2023 ASMS poster on Depthcharge."
+requires-python = ">=3.10"
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C", "I", "D", "UP", "N", "ANN", "T20"]
+
+# ANN101 Missing type annotation for `self` in method
+# D213 Multi-line docstring summary should start at the second lin
+# D203 1 blank line required before class docstring
+# D100 Missing docstring in public module
+# ANN102 Missing type annotation for `cls` in classmethod
+# D401 First line of docstring should be in imperative mood
+ignore = ["D213", "ANN101", "D203", "D100", "ANN102", "D401"]
+fix = true
+
+[tool.ruff.per-file-ignores]
+"*tests/*.py" = ["ANN"]
+# D104 is missing docstring in public package
+# F401 is import is unused
+"**__init__.py" = ["D104", "F401"]
+
+# ANN001 Missing type annotation for function argument
+# Ignoring in the cli since it is redundant with the click options
+# D103 Missing docstring in public function
+# Information in the help of the click command.
+"**cli.py" = ["ANN001", "D103"]
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
