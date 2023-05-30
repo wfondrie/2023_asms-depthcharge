@@ -2,6 +2,7 @@
 data/proteometools/
 data/ccs/
 envs/
+figures/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
