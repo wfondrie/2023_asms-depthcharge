@@ -23,8 +23,21 @@ lint:
 	ruff src
 
 ## Sync to your data source
-sync:
-	@echo "Add your data source to the makefile."
+sync: data/proteometools/test.hdf5 data/ccs/meier_ccs.csv
+
+data/proteometools/test.hdf5:
+	mkdir -p data/proteometools
+	wget -nc https://figshare.com/ndownloader/files/24635438
+	mv 24635438 data/proteometools/test.hdf5
+
+data/ccs/meier_ccs.csv:
+	mkdir -p data/ccs
+	wget -nc https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-021-21352-8/MediaObjects/41467_2021_21352_MOESM6_ESM.zip
+	unzip 41467_2021_21352_MOESM6_ESM.zip
+	mv SourceData_Figure_4.csv data/ccs/meier_ccs.csv
+	rm -r 41467_2021_21352_MOESM6_ESM.zip SourceData_Figure_1.csv
+
+
 
 #################################################################################
 # PROJECT RULES                                                                 #

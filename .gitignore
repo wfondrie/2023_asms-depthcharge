@@ -1,5 +1,7 @@
 .env
-/envs
+data/proteometools/
+data/ccs/
+envs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

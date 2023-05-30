@@ -13,13 +13,18 @@ dependencies:
   - python-dotenv>=0.5.1
   - pip:
       - -e . # Our local package
+      - vizta
+      - depthcharge-ms
 
   # Data Science Packages
+  - umap-learn
   - numpy
   - pandas
   - matplotlib
   - seaborn
   - scikit-learn
-  - vizta
   - jupyterlab
   - ipykernel
+  - pyarrow
+  - pytorch
+  - spectrum_utils
