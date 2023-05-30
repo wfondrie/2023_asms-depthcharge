@@ -1,12 +1,12 @@
-# Depthcharge Examples
+# Depthcharge Application Examples
 
 These are the notebooks and analyses that accompany my ASMS poster.
 
 Run these depthcharge example notebooks on Google Colab:
 
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/wfondrie/2023_asms-depthcharge/blob/main/colab/ion-mobility-prediction.ipynb) **Predicting ion mobility from peptide sequence and charge state**
-- [Predicting peptide fragment ion intensities]()
-- [Embedding mass spectra and peptides to build a search engine]()
+- [[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/wfondrie/2023_asms-depthcharge/blob/main/colab/intensity-prediction.ipynb) **Predicting peptide fragment ion intensities**
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/wfondrie/2023_asms-depthcharge/blob/main/colab/psm-embedding.ipynb)***Embedding mass spectra and peptides**
 
 
 ## Project Organization
